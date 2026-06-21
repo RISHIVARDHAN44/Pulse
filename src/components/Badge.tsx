@@ -2,14 +2,19 @@ import { formatPercent } from "@/utils/format";
 
 interface BadgeProps {
   value: number;
+  size?: "sm" | "lg";
 }
 
-export default function Badge({ value }: BadgeProps) {
+export default function Badge({ value, size = "sm" }: BadgeProps) {
   const isPositive = value >= 0;
+
+  const sizeClasses = size === "lg" 
+    ? "px-3 py-1.5 rounded-xl text-sm" 
+    : "px-2.5 py-1 rounded-lg text-xs";
 
   return (
     <span
-      className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold tabular-nums transition-colors ${
+      className={`inline-flex items-center gap-1 font-semibold tabular-nums transition-colors ${sizeClasses} ${
         isPositive
           ? "bg-[var(--green-subtle)] text-[var(--green)]"
           : "bg-[var(--red-subtle)] text-[var(--red)]"
