@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <link rel="stylesheet" href="/fonts/helvetica/helvetica-now-display/stylesheet.css" />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider>
           <WatchlistProvider>
