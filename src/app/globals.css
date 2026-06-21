@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url("/fonts/helvetica/helvetica-now-display/stylesheet.css");
+@import "tailwindcss";
 
 /* ── Light Mode Tokens ── */
 :root {
